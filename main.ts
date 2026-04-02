@@ -1,42 +1,42 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Dat Nguyen
+ * Created on: Mar 2026
+ * This program will rotate a servo motor.
 */
 
-// Initialize servos
-const servo1 = robotbit.Servos.S1
-robotbit.Servo(servo1, 0)
+// initialize servos
+const SERVO1 = robotbit.Servos.S1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+robotbit.Servo(SERVO1, 0)
 
-// Reset display
+// reset display
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-// Handle button A press
+// handle button A press
 input.onButtonPressed(Button.A, function() {
-    // Turn servo to 0 degrees
-    robotbit.Servo(servo1, 0)
+    // turn servo to 0 degrees
+    robotbit.Servo(SERVO1, 0)
 
-    // Display degrees
+    // display degrees
     basic.clearScreen()
     basic.showString("0")
     basic.showIcon(IconNames.SmallSquare)
 
-    // Reset display
+    // reset display
     basic.showIcon(IconNames.Happy)
 })
 
-// Handle button B press
+// handle button B press
 input.onButtonPressed(Button.B, function () {
-    // Turn servo to 180 degrees
-    robotbit.Servo(servo1, 180)
+    // turn servo to 180 degrees
+    robotbit.Servo(SERVO1, 180)
 
-    // Display degrees
+    // display degrees
     basic.clearScreen()
     basic.showString("180")
     basic.showIcon(IconNames.SmallSquare)
 
-    // Reset display
+    // reset display
     basic.showIcon(IconNames.Happy)
 })
